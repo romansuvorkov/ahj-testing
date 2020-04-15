@@ -1,0 +1,115 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#check-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 20%;
+  background-color: white;
+}
+
+.card_container {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+}
+
+.card_img_container {
+ width: 50px;
+ height: 30px;
+ background-repeat: no-repeat;
+ background-size: cover;
+ margin: 10px;
+ position: relative;
+ border-radius: 3px;
+ overflow: hidden;
+}
+
+.ae {
+  background-image: url('../img/ae.png');
+}
+
+.dc {
+  background-image: url('../img/dc.png');
+}
+
+.disc {
+  background-image: url('../img/disc.png');
+}
+
+.jcb {
+  background-image: url('../img/jcb.png');
+}
+
+.world {
+  background-image: url('../img/world.png');
+}
+
+.mc {
+  background-image: url('../img/mc.png');
+}
+
+.visa {
+  background-image: url('../img/visa.png');
+}
+
+.maestro {
+  background-image: url('../img/maestro.png');
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: gray;
+  z-index: 5;
+}
+
+.button {
+  width: 150px;
+  height: 30px;
+  background-color: lawngreen;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
+  display: none;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.op_09 {
+  opacity: 0.9;
+}
+
+.no_op {
+  opacity: 0;
+}
+
+
+
+
+
+
+
+
