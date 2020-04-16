@@ -9,7 +9,7 @@ describe('Validation form', () => {
     const baseUrl = 'http://localhost:9000';
     beforeAll(async () => {
         browser = await puppetteer.launch({
-        headless: false,
+        headless: true,
         slowMo: 100,
         devtools: true,
         });
