@@ -24,39 +24,6 @@ describe('Validation form', () => {
         const submit = await page.$('.button');
         submit.click();
         await page.waitForSelector('.no_op');
-        // const propertie = await americanExpressMask.getProperty('opacity');
-        // console.log(propertie);
-        // const style = window.getComputedStyle(americanExpressMask);
-        // console.log(style.opacity);
-        // const style = getComputedStyle(americanExpressMask);
-
-        // async function isLocatorReady(element, page) {
-        // const value = await page.evaluate(() => {
-        //     const americanExpress = page.$(element);
-        //     const americanExpressMask = americanExpress.$('.mask');
-        //     const style = window.getComputedStyle(americanExpressMask);
-        //     return style
-        // });
-        // }
-
-        // let x = isLocatorReady('ae', page);
-
-
-        // async function isLocatorReady(element, page) {
-        //     const isVisibleHandle = await page.evaluateHandle((e) => 
-        //   {
-        //       const style = window.getComputedStyle(e);
-        //       return (style && style.display !== 'none' && 
-        //       style.visibility !== 'hidden' && style.opacity !== '0');
-        //    }, element);
-        //     var visible = await isVisibleHandle.jsonValue();
-        //     const box = await element.boxModel();
-        //     if (visible && box) {
-        //       return true;
-        //     }
-        //     return false;
-        // }
-        // let x = isLocatorReady(americanExpressMask, page);
         });
 
 
