@@ -1,11 +1,14 @@
-import puppeteer from 'puppeteer';
+// import puppetteer from 'puppeteer';
+
+var puppetteer = require('puppeteer');
+
 jest.setTimeout(30000); 
 describe('Validation form', () => {
     let browser = null;
     let page = null;
     const baseUrl = 'http://localhost:9000';
     beforeAll(async () => {
-        browser = await puppeteer.launch({
+        browser = await puppetteer.launch({
         headless: false,
         slowMo: 100,
         devtools: true,
