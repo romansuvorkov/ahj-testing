@@ -35,6 +35,7 @@ const input = document.querySelector('.input');
 const button = document.querySelector('.button');
 
 button.addEventListener('click', () => {
+  // eslint-disable-next-line no-restricted-globals
   event.preventDefault();
   if (err.classList.contains('block')) {
     err.classList.remove('block');
