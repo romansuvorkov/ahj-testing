@@ -1,9 +1,22 @@
 // import puppetteer from 'puppeteer';
 
-var puppetteer = require('puppeteer');
+const puppetteer = require('puppeteer');
+const webpack = require('webpack');
+const WebpackDevServer = require('webpack-dev-server');
+const config = require('../../../webpack.config');
+
+const server = new WebpackDevServer(webpack(config), {});
+server.listen(9000, 'localhost', (err) => {
+  if (err) {
+    return;
+  }
+  if (process.send) {
+    process.send('ok');
+  }
+});
 
 jest.setTimeout(30000); 
-describe('Validation form', () => {
+    describe('Validation form', () => {
     let browser = null;
     let page = null;
     const baseUrl = 'http://localhost:9000';
@@ -47,3 +60,5 @@ describe('Validation form', () => {
     });
 
 });
+
+
