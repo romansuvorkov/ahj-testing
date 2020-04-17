@@ -5,22 +5,22 @@ const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 const config = require('../../../webpack.config');
 
-const server = new WebpackDevServer(webpack(config), {});
-server.listen(9000, 'localhost', (err) => {
-  if (err) {
-    return;
-  }
-  if (process.send) {
-    process.send('ok');
-  }
-});
-
-jest.setTimeout(30000); 
+    jest.setTimeout(30000); 
     describe('Validation form', () => {
     let browser = null;
     let page = null;
+    let server = null;
     const baseUrl = 'http://localhost:9000';
     beforeAll(async () => {
+        server = new WebpackDevServer(webpack(config), {});
+        server.listen(9000, 'localhost', (err) => {
+        if (err) {
+            return;
+        }
+        if (process.send) {
+            process.send('ok');
+        }
+        });
         browser = await puppetteer.launch({
         headless: true,
         slowMo: 100,
@@ -42,10 +42,6 @@ jest.setTimeout(30000);
         await page.waitForSelector('.no_op');
         });
 
-
-    });
-
-    describe('Validate error', () => {
         test('Should add .block', async () => {
             
         await page.goto(baseUrl);
@@ -56,8 +52,8 @@ jest.setTimeout(30000);
         await page.waitForSelector('.block');
         });
 
-
     });
+
 
 });
 
