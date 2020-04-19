@@ -23,17 +23,16 @@ const config = require('../../../webpack.config');
         });
         browser = await puppetteer.launch({
         headless: true,
-        slowMo: 100,
         devtools: true,
         });
         page = await browser.newPage();
     });
     afterAll(async () => {
         await browser.close();
+        server.kill();
     });
     describe('Validate card', () => {
         test('Should add .no_op', async () => {
-            
         await page.goto(baseUrl);
         const input = await page.$('.input');
         await input.type('371449635398431');
@@ -43,7 +42,6 @@ const config = require('../../../webpack.config');
         });
 
         test('Should add .block', async () => {
-            
         await page.goto(baseUrl);
         const input = await page.$('.input');
         await input.type('375');
@@ -51,7 +49,6 @@ const config = require('../../../webpack.config');
         submit.click();
         await page.waitForSelector('.block');
         });
-
     });
 
 
