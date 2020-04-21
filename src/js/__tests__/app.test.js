@@ -41,16 +41,14 @@ const config = require('../../../webpack.config');
         await page.waitForSelector('.no_op');
         });
 
-
         test('Should add .block', async () => {
-        await page.goto(baseUrl);
-        const input = await page.$('.input');
-        await input.type('375');
-        const submit = await page.$('.button');
-        submit.click();
-        await page.waitForSelector('.block');      
+            await page.goto(baseUrl);
+            const input = await page.$('.input');
+            await input.type('375');
+            const submit = await page.$('.button');
+            submit.click();
+            await page.waitForSelector('.block');      
         });
-
     });
 
 
