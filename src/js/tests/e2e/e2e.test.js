@@ -38,7 +38,7 @@ describe('E2E', () => {
       const input = await page.$('.input');
       await input.type('371449635398431');
       const submit = await page.$('.button');
-      submit.click();
+      await submit.click();
       await page.waitForSelector('.no_op');
       });
 
@@ -47,7 +47,7 @@ describe('E2E', () => {
       const input = await page.$('.input');
       await input.type('375');
       const submit = await page.$('.button');
-      submit.click();
+      await submit.click();
       await page.waitForSelector('.block');      
     });
   });
