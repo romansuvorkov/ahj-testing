@@ -33,8 +33,7 @@ export default class ValidationCard {
     this.error = err;
     this.input = input;
     this.button = button;
-    this.button.addEventListener('click', () => {
-      // eslint-disable-next-line no-restricted-globals
+    this.button.addEventListener('click', (event) => {
       event.preventDefault();
       this.hideError();
       this.cards.forEach((element) => {
