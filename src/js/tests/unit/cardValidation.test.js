@@ -1,4 +1,5 @@
-import cardValidation from '../../cardValidation';
+// import cardValidation from '../../cardValidation';
+const cardValidation = require('../../cardValidation')
 
 test.each([
   ['AmericanExpress', '371449635398431', 'ae'],
@@ -11,5 +12,5 @@ test.each([
   ['Maestro', '639002309079858005', 'maestro'],
   ['Error', '123545944512258556', 'error'],
 ])('%s', (_, received, expected) => {
-  expect(cardValidation(received)).toEqual(expected);
+  expect(cardValidation.cardValidation(received)).toEqual(expected);
 });
