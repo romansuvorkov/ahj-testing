@@ -40,7 +40,7 @@ describe('E2E', () => {
       const submit = await page.$('.button');
       await submit.click();
       await page.waitForSelector('.no_op');
-      });
+    });
 
     test('Should add .block', async () => {
       await page.goto(url);
@@ -48,7 +48,7 @@ describe('E2E', () => {
       await input.type('375');
       const submit = await page.$('.button');
       await submit.click();
-      await page.waitForSelector('.block');      
+      await page.waitForSelector('.block');
     });
   });
 });
